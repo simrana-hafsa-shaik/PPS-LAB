@@ -1,19 +1,12 @@
+// Write a c program to find the sum of all elements of an array.
 #include<stdio.h>
-int main()
+void main()
 {
- int n,original,remainder,sum=0;
- printf("Enter a number:");
- scanf("%d",&n);
- original=n;
- while(n!=0)
- {
-  remainder=n%10;
-  sum=sum+remainder*remainder*remainder;
-  n=n/10;
- }
- if(sum==original)
-  printf("%d is an Armstrong number",original);
- else
-  printf("%d is not an Armstrong number",original);
- return 0;
+ int s[5],sum=0;
+ printf("Enter 5 values:");
+ for(int i=0;i<5;i++)
+     scanf("%d",&s[i]);
+ for(int i=0;i<5;i++)
+     sum=sum+s[i];
+ printf("Sum=%d",sum);
 }

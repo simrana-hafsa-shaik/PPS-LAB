@@ -1,19 +1,26 @@
+//write a c program to perform addition of two matrices.
 #include<stdio.h>
-int main()
+void main()
 {
- int n,original,remainder,reverse=0;
- printf("Enter a number:");
- scanf("%d",&n);
- original=n;
- while(n!=0)
- {
-  remainder=n%10;
-  reverse=reverse*10+remainder;
-  n=n/10;
- }
- if(reverse==original)
-  printf("%d is a [alindrome number.",original);
- else
-  printf("%d is not a palindrome number.",original);
- return 0;
+ int A[2][2],B[2][2],C[2][2],i,j;
+ printf("Enter 4 values for matrix A:");
+ for(i=0;i<2;i++)
+     for(j=0;j<2;j++)
+        scanf("%d",&A[i][j]);
+ printf("Enter 4 values for matrix B:");
+ for(i=0;i<2;i++)
+     for(j=0;j<2;j++)
+        scanf("%d",&B[i][j]);
+ for(i=0;i<2;i++)
+     for(j=0;j<2;j++)
+        C[i][j]=A[i][j]-B[i][j];
+
+printf("Subtraction of matrices=");
+  for(i=0;i<2;i++)
+  {
+    for(j=0;j<2;j++)
+        printf("%d\t",C[i][j]);
+    printf("\n");
+  }
 }
+

@@ -1,26 +1,18 @@
 #include<stdio.h>
 int main()
 {
- int n,i,j,count;
- printf("Enter the value of n:");
- scanf("%d",&n);
- printf("Prime numbers betwen 1 and %d are:\n",n);
- for(i=2;i<=n;i++)
+ int values[5];
+ printf("Enter 5 integers:");
+ // taking input and storing it in an array
+ for(int i=0;i<5;++i)
  {
-  count=0;
-  for(j=1;j<=i;j++)
-  {
-   if(i%j==0)
-   {
-    count++;
-   }
-  }
- if(count==2)
- {
-  printf("%d",i);
+  scanf("%d",&values[i]);
  }
+ printf("Displaying integers:");
+ //printing elements of the array
+ for(int i=0;i<5;++i)
+ {
+  printf("%d\t",values[i]);
  }
  return 0;
 }
-
-
